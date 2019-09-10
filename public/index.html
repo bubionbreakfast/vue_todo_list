@@ -11,6 +11,14 @@
 </head>
 <body>
   <div id="app">
+    <h1>The To Do LIst</h1>
+  <span>  <label for="priority">High</label>
+    <input type="radio" name="priority" id="high">
+    <label for="priority">Low</label>
+    <input type="radio" name="priority" value="low"></span>
+
+    <input type="text" v-model="newItem">
+    <button v-on:click="saveItem(newItem)">Add New Item</button>
     <ul>
       <li v-for="(item, index) in items">
       <span>{{ item }}</span>
@@ -18,8 +26,7 @@
     </li>
   </ul>
 
-  <input type="text" v-model="newItem">
-  <button v-on:click="saveItem(newItem)">Add New Item</button>
+
 
 </div>
 </body>
